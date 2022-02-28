@@ -1,0 +1,138 @@
+@import "AMIRI-base";
+@import "AMIRI-header&footer";
+
+.header {
+    width: 100%;
+    height: auto;
+    background: none;
+}
+
+.main-header {
+    background: none;
+    color: $color-black;
+}
+
+.navbar {
+    a {
+        color: $color-black;
+    }
+}
+
+.location {
+    color: $color-black !important;
+    border: $border-black !important;
+
+    &:hover {
+        background-color: $color-black !important;
+        color: $color-white !important;
+    }
+}
+
+.other {
+    .account {
+        @include font-style-secondary();
+
+        &::after{
+            top: 16px;
+            background-color: $color-black;
+        }
+    }
+
+    .search-ico {
+        @include font-style-secondary();
+    }
+
+    .handle {
+        border: $border-black;
+    }
+
+    .bascket {
+        @include font-style-secondary();
+        border: $border-black;
+
+        &:hover {
+            background-color: $color-black;
+            color: $color-white;
+        }
+    }
+
+    .bs {
+        margin-left: 10px;
+        cursor: pointer;
+    }
+}
+
+.link {
+    color: $color-black !important;
+
+    &:hover {
+        border-bottom: $border-black !important;
+    }
+}
+
+
+.register {
+    width: 30%;
+    margin: 50px auto;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 180px;
+
+    @media (max-width:768px) {
+        width: 90%;
+    }
+
+
+    &-head {
+        font-size: 20px;
+        font-weight: lighter;
+        margin-bottom: 50px;
+    }
+
+    input {
+        display: block;
+        padding: 10px 10px;
+        width: 100%;
+        text-transform: uppercase;
+        border-radius: 3px;
+        margin: 10px 0;
+        border: $border-black;
+        font-size: 12px;
+    }
+
+    &-btn {
+        width: 100%;
+        @extend %primary-btn;
+        @include font-style-secondary();
+        border: $border-black;
+        color: $color-black;
+        margin-bottom: 30px;
+
+        &:hover {
+            background-color: $color-black;
+            color: $color-white;
+        }
+    }
+
+    &-link {
+        @include font-style-secondary();
+        position: relative;
+
+        &::after{
+            position: absolute;
+            content: "";
+            top: 14px;
+            left: 0;
+            width: 100%;
+            height: .3px;
+            background-color: $color-black;
+            transform: scale(0,1);
+            transform-origin: 0 100%;
+            transition: transform .5s;
+        }
+    
+        &:hover::after{
+            transform: scale(1,1);
+        }
+    }
+}

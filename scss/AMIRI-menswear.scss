@@ -1,0 +1,225 @@
+@import "AMIRI-base";
+@import "AMIRI-header&footer";
+
+.header {
+    width: 100%;
+    height: auto;
+    background: none;
+}
+
+.main-header {
+    background: none;
+    color: $color-black;
+    background-color: $color-white;
+}
+
+.location {
+    color: $color-black !important;
+    border: $border-black !important;
+
+    &:hover {
+        background-color: $color-black !important;
+        color: $color-white !important;
+    }
+}
+
+.navbar {
+    a {
+
+        color: $color-black;
+
+    }
+}
+
+.other {
+    .account {
+        @include font-style-secondary();
+
+        &::after{
+            background-color: $color-black;
+        }
+    }
+
+    .search-ico {
+        @include font-style-secondary();
+    }
+
+    .handle {
+        border: $border-black;
+    }
+
+    .bascket {
+        @include font-style-secondary();
+        border: $border-black;
+
+        &:hover {
+            background-color: $color-black;
+            color: $color-white;
+        }
+    }
+
+    .bs {
+        margin-left: 10px;
+        cursor: pointer;
+    }
+}
+
+.link {
+    color: $color-black !important;
+
+    &:hover {
+        border-bottom: $border-black !important;
+    }
+}
+
+.menswear {
+    width: 38%;
+    padding: 30px 25px;
+
+    @media (max-width:768px) {
+        margin-top: 300px;
+    }
+
+    @media (max-width:500px) {
+        margin-top: 180px;
+    }
+
+    &-head {
+        font-size: 18px;
+        margin-bottom: 60px;
+
+        @media (max-width:500px) {
+            margin-bottom: 0;
+        }
+    }
+
+    &-text {
+        font-size: $font-size-primary;
+        color: $color-white;
+        text-align: justify;
+        margin-bottom: 60px;
+
+        @media (max-width:768px) {
+            display: none;
+        }
+    }
+
+    &-links {
+        display: flex;
+        gap: 15px;
+        font-size: 10px;
+        margin-bottom: 60px;
+
+        @media (max-width:768px) {
+            margin-bottom: 0;
+        }
+    }
+
+    .home {
+        color: $color-white;
+
+        &:hover {
+            color: $color-black;
+        }
+    }
+
+    .slash {
+        color: $color-white;
+    }
+
+    &-btn {
+        width: 45%;
+        margin-right: 5px;
+        cursor: pointer;
+        @include menswear-btn();
+
+        &:hover {
+            color: $color-white;
+            background-color: $color-black;
+        }
+
+        @media (max-width:768px) {
+            display: none;
+        }
+    }
+
+    &-select {
+        width: 45%;
+        padding-left: 10px;
+        cursor: pointer;
+        @include menswear-btn();
+
+
+        @media (max-width:768px) {
+
+            display: none;
+        }
+    }
+}
+
+@media (max-width:768px) {
+
+    .header .background {
+        position: absolute;
+    }
+}
+
+@media (max-width:500px) {
+    body {
+        padding: 0 15px;
+    }
+
+    .hamburger {
+        left: 0px;
+    }
+
+    .other {
+        right: 0px;
+    }
+}
+
+.gallery {
+    width: 100%;
+    margin-bottom: 150px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    @media (max-width:768px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &-item {
+        cursor: pointer;
+    }
+
+    &-img {
+        overflow: hidden;
+        position: relative;
+
+        &:hover>.hover-img {
+            opacity: 1;
+        }
+    }
+
+    img {
+        width: 100%;
+    }
+
+
+    .hover-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+
+    }
+
+    &-item-text {
+        @include font-style-secondary();
+        padding: 20px;
+
+        @media (max-width:500px) {
+            font-size: 8px;
+        }
+    }
+}

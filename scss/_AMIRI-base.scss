@@ -1,0 +1,100 @@
+$color-white:#fff;
+$color-black:#000;
+$color-gray:#e4e4e4e5;
+
+$font-primary:helvetica-neue-lt-std-roman;
+$font-secondary:helvetica-neue-lt-std-extended;
+
+$font-size-primary:12px;
+$font-size-secondary:15px;
+
+$border-primary:1px solid $color-white;
+$border-secondary:1px solid $color-gray;
+$border-black:1px solid $color-black;
+
+@mixin max-width {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+@mixin hover-primary {
+    background-color: $color-white;
+    opacity: .8;
+    color: $color-black;
+}
+
+@mixin font-style-orimary {
+    color: $color-gray;
+    font-size: $font-size-primary;
+}
+
+@mixin font-style-secondary {
+    color: $color-black;
+    font-size: $font-size-primary;
+}
+
+@mixin border-bottom {
+    border: none;
+    border-bottom: $border-black;
+}
+
+@mixin menswear-btn {
+    height: 50px;
+    text-transform: uppercase;
+    font-size: 12px;
+    background-color: $color-white;
+    border: $border-black;
+    border-radius: 3px;
+}
+
+@font-face {
+    font-family: helvetica-neue-lt-std-extended;
+    src: url(../fonts/Helvetica-Neue-LT-Std-53-Extended_22525.ttf);
+    src: url(../fonts/Helvetica-Neue-LT-Std-63-Medium-Extended_22531.ttf);
+    src: url(../fonts/Helvetica-Neue-LT-Std-73-Bold-Extended_22537.ttf);
+}
+
+@font-face {
+    font-family: helvetica-neue-lt-std-roman;
+    src: url(../fonts/Helvetica-Neue-LT-Std-55-Roman_22526.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-primary;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    line-height: 1.5em;
+}
+
+body {
+    overflow-x: hidden;
+
+    @media (max-width:768px) {
+        padding: 0 50px;
+    }
+
+    @media (max-width:500px) {
+        padding: 0 30px;
+    }
+
+
+}
+
+%primary-btn {
+    @include font-style-orimary();
+    border: 1px solid $color-white;
+    border-radius: 5px;
+    color: $color-white;
+    background-color: inherit;
+    padding: 25px 55px;
+    text-transform: uppercase;
+    transition: all .3s;
+
+    &:hover {
+        background-color: $color-white;
+        color: $color-black;
+    }
+}
