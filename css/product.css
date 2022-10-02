@@ -1,0 +1,67 @@
+@font-face {
+  font-family: helvetica-neue-lt-std-extended;
+  src: url(../fonts/Helvetica-Neue-LT-Std-53-Extended_22525.ttf);
+  src: url(../fonts/Helvetica-Neue-LT-Std-63-Medium-Extended_22531.ttf);
+  src: url(../fonts/Helvetica-Neue-LT-Std-73-Bold-Extended_22537.ttf);
+}
+@font-face {
+  font-family: helvetica-neue-lt-std-roman;
+  src: url(../fonts/Helvetica-Neue-LT-Std-55-Roman_22526.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: helvetica-neue-lt-std-roman;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  line-height: 1.5em;
+}
+
+body {
+  overflow-x: hidden;
+}
+@media (max-width: 768px) {
+  body {
+    padding: 0 50px;
+  }
+}
+@media (max-width: 500px) {
+  body {
+    padding: 0 30px;
+  }
+}
+
+.gallery-item {
+  cursor: pointer;
+}
+
+.gallery-img {
+  overflow: hidden;
+  position: relative;
+}
+.gallery-img:hover > .hover-img {
+  opacity: 1;
+}
+
+img {
+  width: 100%;
+}
+
+.hover-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.gallery-item-text {
+  color: #000;
+  font-size: 12px;
+  padding: 20px;
+}
+@media (max-width: 500px) {
+  .gallery-item-text {
+    font-size: 8px;
+  }
+}/*# sourceMappingURL=product.css.map */
